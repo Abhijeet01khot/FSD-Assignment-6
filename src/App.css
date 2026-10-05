@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Press Start 2P", monospace;
+}
+
+/* Main screen */
+
+.game-screen {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px 20px;
+
+  background:
+    linear-gradient(
+      rgba(235, 245, 255, 0.92),
+      rgba(255, 240, 250, 0.92)
+    ),
+    repeating-linear-gradient(
+      0deg,
+      #dcecff 0px,
+      #dcecff 2px,
+      #e9dcff 2px,
+      #e9dcff 4px
+    );
+
+  color: #29234a;
+}
+
+/* Title */
+
+.game-screen > h1 {
+  color: #6c4bc4;
+
+  font-size: 24px;
+
+  margin-bottom: 35px;
+
+  text-shadow: 3px 3px 0 white;
+}
+
+/* Counter card */
+
+.counter-card {
+  width: 430px;
+  max-width: 100%;
+
+  background: white;
+
+  border: 5px solid #5f55a5;
+
+  box-shadow:
+    8px 8px 0 #9a8de3,
+    12px 12px 0 #ffd84d;
+}
+
+/* Header */
+
+.card-header {
+  background: #ff6f91;
+
+  color: white;
+
+  border-bottom: 5px solid #5f55a5;
+
+  padding: 17px;
+
+  text-align: center;
+
+  font-size: 12px;
+}
+
+/* Content */
+
+.counter-content {
+  padding: 35px;
+
+  text-align: center;
+}
+
+/* Label */
+
+.score-label {
+  color: #7862b8;
+
+  font-size: 10px;
+
+  margin-bottom: 15px;
+}
+
+/* Score */
+
+.score-display {
+  min-height: 130px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f5f3ff;
+
+  border: 5px solid #aaa2d5;
+
+  color: #5f55a5;
+
+  font-size: 65px;
+
+  margin-bottom: 20px;
+
+  box-shadow: inset 5px 5px 0 #ded9f3;
+}
+
+/* Status */
+
+.status {
+  color: #6650b5;
+
+  font-size: 10px;
+
+  min-height: 20px;
+
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+
+.button-container {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+}
+
+.game-button {
+  border: 4px solid #5f55a5;
+
+  font-family: "Press Start 2P", monospace;
+
+  cursor: pointer;
+
+  box-shadow: 5px 5px 0 #8d82c9;
+
+  transition: 0.1s;
+}
+
+.game-button:hover {
+  transform: translate(3px, 3px);
+
+  box-shadow: 2px 2px 0 #8d82c9;
+}
+
+.game-button:active {
+  transform: translate(5px, 5px);
+
+  box-shadow: none;
+}
+
+/* Decrease */
+
+.decrease {
+  width: 65px;
+  height: 60px;
+
+  background: #ff8fa8;
+
+  color: white;
+
+  font-size: 28px;
+}
+
+/* Reset */
+
+.reset {
+  height: 60px;
+
+  padding: 0 18px;
+
+  background: #ffd84d;
+
+  color: #40366f;
+
+  font-size: 9px;
+}
+
+/* Increase */
+
+.increase {
+  width: 65px;
+  height: 60px;
+
+  background: #72df91;
+
+  color: white;
+
+  font-size: 28px;
+}
+
+/* Footer inside card */
+
+.card-footer {
+  border-top: 5px solid #5f55a5;
+
+  padding: 13px;
+
+  text-align: center;
+
+  color: #8a80b5;
+
+  font-size: 7px;
+}
+
+/* Page footer */
+
+.footer-text {
+  margin-top: 35px;
+
+  color: #7862b8;
+
+  font-size: 9px;
+
+  animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+  .game-screen > h1 {
+    font-size: 16px;
+  }
+
+  .counter-content {
+    padding: 25px 18px;
+  }
+
+  .score-display {
+    font-size: 50px;
+  }
+
+  .button-container {
+    gap: 8px;
+  }
+
+}
